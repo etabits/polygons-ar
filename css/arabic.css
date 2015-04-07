@@ -1,0 +1,9 @@
+
+*[lang="ar"] {
+  direction: rtl;
+  font-family: 'Droid Arabic Naskh';
+}
+*[lang="ar"] i {
+  font-weight: bold;
+}
+

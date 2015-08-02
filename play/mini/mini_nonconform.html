@@ -1,17 +1,19 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link href="mini.css" rel="stylesheet" type="text/css">
+	<link href="../../css/arabic.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<canvas id="canvas"></canvas>
 	<br>
 	<div style="text-align:center; margin:10px 0; color:#777">
-		wants to move if <span style="color:#dd3939">more than 90%</span> of
+		يريد أن يتحرك إذا كان <span style="color:#dd3939">أكثر من 90%</span> من
 		<br>
-		their neighbors are like them
+		جيرانه مثله
 	</div>
-	<div id="reset" onclick="reset()">reset</div>
+	<div lang="ar" id="reset" onclick="reset()">إعادة</div>
 
 	<script>
 	var TILE_SIZE = 80;

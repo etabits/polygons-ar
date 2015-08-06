@@ -2,8 +2,10 @@
 *[lang="ar"] {
   direction: rtl;
   font-family: 'Droid Arabic Naskh';
+  line-height: 1.6em;
 }
-*[lang="ar"] i {
+
+*[lang="ar"] i, *[lang="ar"] strong {
   font-weight: bold;
 }
 

@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+   <meta charset="utf-8">
 	<style>
 	body{
 		margin:0;
@@ -56,31 +57,32 @@
 		letter-spacing: 2px;
 	}
 	</style>
+	<link href="../../css/arabic.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="intro">
 		<canvas id="canvas" width="1280" height="300" style="position:absolute;bottom:0"></canvas>
 		<div id="intro_shading"></div>
-		<div id="share_text">
+		<div id="share_text" lang="ar">
 
-			SHARE<span style="position:relative;top:-5px">:</span>
+			<span style="letter-spacing: 0">شاركها</span><span style="position:relative;top:-5px">:</span>
 
-			<a data-popup-url="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fncase.me%2Fpolygons%2F&amp;t=Parable of the Polygons: a playable post on how harmless choices can make a harmful world."
+			<a data-popup-url="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.aularon.com%2Fplayables%2Fpolygons-ar%2F&amp;t=Parable of the Polygons: a playable post on how harmless choices can make a harmful world."
 				data-popup-width="626" data-popup-height="436"
 				onclick="return sharePopup.call(this,event);">
 				<img src="icons/facebook.png" width="60" height="60"/></a>
 
-			<a data-popup-url="https://twitter.com/share?url=http%3A%2F%2Fncase.me%2Fpolygons%2F&amp;text=Parable of the Polygons: how harmless choices can make a harmful world. From @vihartvihart and @ncasenmare."
+			<a data-popup-url="https://twitter.com/share?url=http%3A%2F%2Fwww.aularon.com%2Fplayables%2Fpolygons-ar%2F&amp;text=Parable of the Polygons: how harmless choices can make a harmful world. From @vihartvihart and @ncasenmare."
 				data-popup-width="640" data-popup-height="400"
 				onclick="return sharePopup.call(this,event);">
 				<img src="icons/twitter.png" width="60" height="60"/></a>
 
-			<a data-popup-url="https://plus.google.com/share?url=http%3A%2F%2Fncase.me%2Fpolygons%2F"
+			<a data-popup-url="https://plus.google.com/share?url=http%3A%2F%2Fwww.aularon.com%2Fplayables%2Fpolygons-ar%2F"
 				data-popup-width="600" data-popup-height="460"
 				onclick="return sharePopup.call(this,event);">
 				<img src="icons/googleplus.png" width="60" height="60"/></a>
 
-			<a data-popup-url="https://www.tumblr.com/share/link?url=http%3A%2F%2Fncase.me%2Fpolygons%2F&amp;name=Parable of the Polygons&amp;description=A playable post on how harmless choices can make a harmful world."
+			<a data-popup-url="https://www.tumblr.com/share/link?url=http%3A%2F%2Fwww.aularon.com%2Fplayables%2Fpolygons-ar%2F&amp;name=Parable of the Polygons&amp;description=A playable post on how harmless choices can make a harmful world."
 				data-popup-width="446" data-popup-height="430"
 				onclick="return sharePopup.call(this,event);">
 				<img src="icons/tumblr.png" width="60" height="60"/></a>
@@ -88,27 +90,34 @@
 			<a href="http://www.reddit.com/submit" onclick="window.open('http://www.reddit.com/submit?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'The Parable of the Polygons','toolbar=no,width=840,height=750'); return false;">
         		<img src="icons/reddit.png" alt="submit to reddit" width="60" height="60" border="0"/></a>
 
-			<a href="http://www.stumbleupon.com/submit?url=http://ncase.me/polygons/" target="_blank">
+			<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.aularon.com%2Fplayables%2Fpolygons-ar%2F" target="_blank">
         		<img style="border: 0pt none;" src="icons/stumbleupon.png" border="0" alt="stumble" width="60" height="60" /></a>
 
 		</div>
 		<div id="pd_text">
-			<span style="font-size:35px; color:#fff">this playable post is
-				<a target="_blank" href="http://creativecommons.org/publicdomain/zero/1.0/" style="color:#fff">public domain</a>.
+			<span style="font-size:35px; color:#fff; letter-spacing: 0px" lang="ar">هذه الصفحة التفاعليّة
+				<a target="_blank" href="http://creativecommons.org/publicdomain/zero/1.0/" style="color:#fff">ملكيّة عامّة</a>.
 			</span>
-			<div style="width:600px; margin:5px auto; font-size:18px; letter-spacing:0; font-weight:normal">
-				please feel free to use this in your classrooms,
-				make video/picture/text adaptations,
-				or modify the <a href="https://github.com/ncase/polygons" target="_blank">source code</a>!
-				attribution is not mandatory, but super appreciated.
-				we are <a href="http://vihart.com/" target="_blank">vi hart</a> and <a href="http://www.patreon.com/ncase" target="_blank">nicky case</a>.
+			<div style="width:600px; margin:5px auto; font-size:18px; letter-spacing:0; font-weight:normal" lang="ar">
+				لا تتردّد في استعمال هذه الصفحة في صفّك،
+				أو استخدامها في فيديو/صورة/نصّ،
+				أو تعديل
+				<a href="https://github.com/etabits/polygons-ar">الكود المصدري</a>!<br />
+				ذكر المصدر ليس شرطاً، لكنّنا نقدّره بشدّة.
+				نحنُ  <a href="http://vihart.com/" target="_blank">ڤاي هارت</a> و <a href="http://www.patreon.com/ncase" target="_blank">نيكي كَيس</a>.
+				<br />
+				(نقلها إلى العربيّة
+					<a href="https://www.facebook.com/eram.herbstlied" target="_blank">إرم ديّوب</a>
+					و
+					<a href="https://www.facebook.com/hasan.arous" target="_blank">حسن عروس</a>)
 			</div>
-			<div style="width:600px; margin:25px auto; font-size:18px; letter-spacing:0; font-weight:normal">
-				show us how you're using and remixing Parable of the Polygons!
+			<div style="width:600px; margin:25px auto; font-size:18px; letter-spacing:0; font-weight:normal" lang="ar">
+				أخبرنا كيف تستخدم وتعدّل حكاية المضلّعات!
 				<br>
-				tweet us at
-				<a href="https://twitter.com/vihartvihart" target="_blank">@vihartvihart</a> and
-				<a href="https://twitter.com/ncasenmare" target="_blank">@ncasenmare</a>.
+				غرّد إلينا على
+				<a href="https://twitter.com/herbstlied" dir="ltr">@herbstlied</a>
+				و
+				<a href="https://twitter.com/aularon" dir="ltr">@aularon</a>.
 			</div>
 		</div>
 

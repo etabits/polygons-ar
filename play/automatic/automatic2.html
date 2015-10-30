@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <meta charset="utf-8">
 	<title>Automatic Simulation - Change Bias</title>
 	<link href="automatic.css" rel="stylesheet" type="text/css">
 	<link href="doubleslider.css" rel="stylesheet" type="text/css">
@@ -26,7 +27,7 @@
 			<div id="slider"></div>
 			<br>
 
-			<div class="ui" id="moving" onclick="START_SIM=!START_SIM; doneBuffer = 60; window.writeStats()"></div>
+			<div class="ui" id="moving" onclick="doSim()"></div>
 			<div class="ui" id="reset" onclick="reset()" style="margin-left:9px"></div>
 		</div>
 	</div>
@@ -40,7 +41,31 @@
 <script src="automatic.js"></script>
 <script src="doubleslider.js"></script>
 <script>
+'use strict';
 var bias_text = document.getElementById("bias_text");
+
+var oldIsDone = isDone;
+isDone = function() {
+	var done = oldIsDone();
+
+	if (done) {
+		//If we think we are done but still have to increase BIAS to match target, we do it and consider it undone yet!
+		if (BIAS < targetBias) {
+			console.log('Increasing BIAS=', BIAS, 'to match targetBias=', targetBias);
+			BIAS += (100-BIAS)/10000;
+			return false;
+		}
+	}
+
+	return done;
+}
+
+var oldBias = 0.33;
+var targetBias = 0.33;
+
+var doSim = function() {
+	START_SIM=!START_SIM; doneBuffer = 60; window.writeStats();
+}
 
 var whatever = new DoubleSlider(document.getElementById("slider"),{
 	backgrounds:[
@@ -50,17 +75,16 @@ var whatever = new DoubleSlider(document.getElementById("slider"),{
 	],
 	values:[0.33,1.02],
 	onChange:function(values){
-		
-		window.BIAS = values[0];
+		targetBias = values[0];
 
 		// Write stats
 		START_SIM = false;
 		window.writeStats();
-		bias_text.innerHTML = Math.round(window.BIAS*100)+"%";
+		bias_text.innerHTML = Math.round(targetBias*100)+"%";
 
 	}
 });
 
-//window.IS_IN_SIGHT = true;
+window.IS_IN_SIGHT = true;
 
 </script>
